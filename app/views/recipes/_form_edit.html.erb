@@ -1,0 +1,24 @@
+<%= content_tag :div, id: 'recipe-form', class: 'columns', data: { recipe: recipe.to_json(except: [:created_at, :updated_at])} do %>
+    <div class="column">
+    <div id="form" class="card">
+      <div class="card-content">
+        <h2 class="title">Cadastrar Receita</h2>
+ 
+        <label>Título:</label>
+        <input type='text' v-model="recipe.title" class="input">
+    
+        <label>Tipo de Receita:</label>
+        <input type='text' v-model="recipe.recipe_type" class="input">
+    
+        <label>Cozinha:</label>
+        <input type='text' v-model="recipe.cuisine" class="input">
+    
+        <label>Dificuldade:</label>
+        <input type='text' v-model="recipe.difficulty" class="input">
+      </div>
+      <div class="card-footer">
+        <button @click="editForm" class="button is-link">Editar Receita</button>
+      </div>
+    </div>
+  </div>
+<% end %>
