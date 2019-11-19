@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     methods: {
       editForm() {
         this.$http.patch('/recipes/'+recipe.id, { recipe: this.recipe })
-      
       }
     }
   });

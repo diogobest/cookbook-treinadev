@@ -1,6 +1,9 @@
 <template> 
-  <p><a href="/recipes/recipes.id">{{ recipes.title }}</a> {{ recipes.recipe_type }} {{ recipes.cuisine}} {{ recipes.difficulty}} </p> 
+  <ul>
+    <li><a :href="/recipes/+recipes.id">{{ recipes.title }}</a></li> 
+  </ul>
 </template>
+
 
 <script>
   export default {
