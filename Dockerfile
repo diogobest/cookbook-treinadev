@@ -22,5 +22,3 @@ COPY . /cookbook
 # RUN export LC_ALL=C.UTF-8
 # RUN export LANG=en_US.UTF-8
 # RUN export LANGUAGE=en_US.UTF-8
-
-# CMD ["-p 3000:3000"]

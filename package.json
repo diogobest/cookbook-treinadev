@@ -5,9 +5,11 @@
     "@rails/webpacker": "^4.2.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.2",
+    "vue-quick-menu": "^1.0.7",
     "vue-resource": "^1.5.1",
     "vue-template-compiler": "^2.6.10",
-    "vue-turbolinks": "^2.0.4"
+    "vue-turbolinks": "^2.0.4",
+    "vuetable": "^1.5.12"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.9.0"

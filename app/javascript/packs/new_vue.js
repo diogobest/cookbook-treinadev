@@ -27,7 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         this.$http.post('/recipes', { recipe: this.recipe }).then(response => {
           console.log(response)
         });
-      }
+       // window.location.replace('/recipes/'+this.recipe_id);
+        // this.$http.get('/recipes/'+recipe.id).then()
+      },
+      created: function() {
+        this.recipe_id = recipe_id;
+        }
     }
   });
 }

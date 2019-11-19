@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       editForm() {
-        this.$http.patch('/recipes/'+recipe.id, { recipe: this.recipe }).then(response => {
-          console.log(response.body)
-        });
+        this.$http.patch('/recipes/'+recipe.id, { recipe: this.recipe })
+      
       }
     }
   });

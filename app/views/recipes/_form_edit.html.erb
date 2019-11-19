@@ -22,3 +22,7 @@
     </div>
   </div>
 <% end %>
+
+<%= content_for :java_script do %>
+  var recipe_id = <%= recipe.id %>;
+<% end %>

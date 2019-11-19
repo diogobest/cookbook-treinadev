@@ -1,13 +1,23 @@
-<h1>CookBook</h1>
-<p>Bem-vindo ao maior livro de receitas online</p>
-<%= link_to 'Nova Receita', new_recipe_path %>
+<div id='menu'>
+  <h1>CookBook</h1>
+  <p>Bem-vindo ao maior livro de receitas online</p>
 
-<% @recipes.each do |recipe| %>
-  <h3><%= link_to recipe.title, recipe %></h3>
-  <ul>
-    <li><%= recipe.recipe_type %></li>
-    <li><%= recipe.cuisine %></li>
-    <li><%= recipe.difficulty %></li>
-    <li><%= recipe.cook_time_min %></li>
-  </ul>
+  <%= link_to 'Nova Receita', new_recipe_path %>
+
+  <menu-index
+    v-for="(recipe, index) in recipes"
+    :key="index"
+    :recipes="recipe"
+  >
+
+  </menu-index>
+
+</div>
+
+<%= content_for :included_scripts do %>
+  <%= javascript_pack_tag 'index_recipe_vue' %>
+<% end %>
+
+<%= content_for :java_script do %>
+  var recipes = <%= raw @recipes.to_json %>;
 <% end %>
