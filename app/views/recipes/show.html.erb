@@ -1,3 +1,17 @@
-<%= render 'form_show', recipe: @recipe %>
-<%= link_to 'editar', edit_recipe_path %>
-<%= javascript_pack_tag 'edit_recipe_vue' %>
+<div id='recipe'>
+  <div class='container'>
+    <show-recipe
+    :recipe='recipe'
+    ></show-recipe>
+
+    <%= link_to 'editar', edit_recipe_path %>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'show_recipe_vue' %>
+
+<%= content_for :java_script do %>
+  var recipe = <%= raw @recipe.to_json %>;
+<% end %>
+
+

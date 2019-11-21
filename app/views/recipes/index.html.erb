@@ -1,14 +1,15 @@
-<div id='menu'>
-  <h1>CookBook</h1>
-  <p>Bem-vindo ao maior livro de receitas online</p>
+<div class='container'>
+  <div id='menu'>
+    <p>Bem-vindo ao maior livro de receitas online</p>
 
-  <%= link_to 'Nova Receita', new_recipe_path %>
-  <p></p>
-  <menu-index
-    v-for="(recipe, index) in recipes"
-    :key="index"
-    :recipes="recipe">
-  </menu-index>
+    <%= link_to 'Nova Receita', new_recipe_path %>
+    <p></p>
+    <menu-index
+      v-for="(recipe, index) in recipes"
+      :key="index"
+      :recipes="recipe">
+    </menu-index>
+  </div>
 </div>
 
 <%= content_for :included_scripts do %>

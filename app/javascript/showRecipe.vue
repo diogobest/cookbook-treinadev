@@ -1,0 +1,39 @@
+<template>
+    <div class='column is-two-thirds preview card'>
+      <div id="cv-preview" class="card-content">
+        <div class="recipe_type">
+            <p class="subtitle" v-if="recipe.recipe_type != null">Título de Receita</p>
+            <p>
+            {{ recipe.title }}
+            </p>
+        </div>
+    
+        <div class="recipe_type">
+            <p class="subtitle" v-if="recipe.recipe_type != null">Tipo de Receita</p>
+            <p>
+            {{ recipe.recipe_type }}
+            </p>
+        </div>
+        
+        <div class="cuisine">
+            <p class="subtitle" v-if="recipe.cuisine != null">Cozinha</p>
+            <p>
+            {{ recipe.cuisine }}
+            </p>
+        </div>
+        
+        <div class="difficulty">
+            <p class="subtitle" v-if="recipe.difficulty != null">Dificuldade</p>
+            <p>
+            {{ recipe.difficulty }}
+            </p>
+        </div>
+      </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        props: ['recipe']
+  }
+</script>

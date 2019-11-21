@@ -18,5 +18,7 @@ export default {
 p {
   font-size: 2em;
   text-align: center;
+footer {
+  position: fixed
 }
 </style>
