@@ -16,3 +16,16 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+
+import Vue from 'vue'
+import Slider from '@jeremyhamm/vue-slider'
+import app from '/cookbook/app/javascript/app.vue'
+
+Vue.use(Slider)
+
+export default {
+    components: {
+      'slider': Slider,
+      'app': app
+    }
+  }
