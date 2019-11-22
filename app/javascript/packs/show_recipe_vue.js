@@ -3,8 +3,6 @@ import showRecipe from '../showRecipe.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log(recipe)
-
   new Vue({
     el: '#recipe',
     functional: true,

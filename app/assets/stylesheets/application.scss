@@ -11,7 +11,10 @@
  * It is generally better to create a new file per style scope.
  */
  @import "bootstrap";
-
+ @import "index.scss";
+ @import "bulma/css/bulma.css";
+ @import "font-awesome";
+ 
 //  @import '~bootstrap-vue';
 //  @import 'node_modules/bootstrap/scss/bootstrap';
 //  @import 'node_modules/bootstrap-vue/src/index.scss';

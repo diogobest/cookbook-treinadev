@@ -4,7 +4,7 @@
     :recipe='recipe'
     ></show-recipe>
 
-    <%= link_to 'editar', edit_recipe_path %>
+    <%= link_to 'editar', edit_recipe_path, class: "btn-editar" %>
   </div>
 </div>
 
@@ -13,5 +13,4 @@
 <%= content_for :java_script do %>
   var recipe = <%= raw @recipe.to_json %>;
 <% end %>
-
 

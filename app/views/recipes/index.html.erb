@@ -1,14 +1,16 @@
 <div class='container'>
-  <div id='menu'>
+  <div id='menu' class="columns">
+    <div class="column">
+
     <p>Bem-vindo ao maior livro de receitas online</p>
 
-    <%= link_to 'Nova Receita', new_recipe_path %>
     <p></p>
     <menu-index
       v-for="(recipe, index) in recipes"
       :key="index"
       :recipes="recipe">
     </menu-index>
+    </div>
   </div>
 </div>
 
@@ -19,3 +21,4 @@
 <%= content_for :java_script do %>
   var recipes = <%= raw @recipes.to_json %>;
 <% end %>
+
